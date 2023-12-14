@@ -157,3 +157,30 @@ footer button[type="submit"] {
 footer a:hover {
   text-decoration: underline;
 }
+
+.trusted-addresses-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+.trusted-address {
+  background-color: #f3f3f3;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.address {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.role {
+  color: #555;
+}
