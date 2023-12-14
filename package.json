@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-	"@celo-tools/use-contractkit": "^3.1.0",
-	"@celo/contractkit": "^1.5.1",
 	"@testing-library/jest-dom": "^5.16.1",
 	"@testing-library/react": "^12.1.2",
 	"@testing-library/user-event": "^13.5.0",

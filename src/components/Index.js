@@ -7,3 +7,4 @@ export { default as ShipToRetailer } from "./ShipToRetailer";
 export { default as TrackItem } from "./TrackItem";
 export { default as AssignRole } from "./AssignRole";
 export { default as Footer } from "./Footer";
+export { default as TrustedAddressesTextBox } from "./TrustedAddresses";
