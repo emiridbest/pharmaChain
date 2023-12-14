@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Web3 from "web3";
-import { newKitFromWeb3 } from "@celo/contractkit";
 import "./App.css";
 
 import { contractABI, contractAddress } from "./utils/const";
@@ -14,6 +13,7 @@ import {
   TrackItem,
   Welcome,
   Footer,
+  TrustedAddressesTextBox
 } from "./components/Index";
 
 function App() {
@@ -31,22 +31,19 @@ function App() {
   const [items, setItems] = useState([]);
   const [role, setRole] = useState(null);
   const [contract, setContractInstance] = useState(null);
-  const [kit, setKit] = useState(null);
 
   const initContract = useCallback(async () => {
     try {
       if (!window.ethereum) {
-        console.error("Celo Wallet extension not detected");
+        console.error("Wallet extension not detected");
         return;
       }
 
       const web3 = new Web3(window.ethereum);
-      const kit = newKitFromWeb3(web3);
       await window.ethereum.request({ method: "eth_requestAccounts" });
-      const contract = new kit.web3.eth.Contract(contractABI, contractAddress);
+      const contract = new web3.eth.Contract(contractABI, contractAddress);
 
-      setCurrentAccount((await kit.web3.eth.getAccounts())[0]);
-      setKit(kit);
+      setCurrentAccount((await web3.eth.getAccounts())[0]);
       setContractInstance(contract);
     } catch (error) {
       console.log(error);
@@ -60,7 +57,7 @@ function App() {
   const checkIfWalletIsConnected = () => {
     try {
       if (!window.ethereum)
-        return alert("Please install the Celo wallet extension");
+        return alert("Please install the wallet extension");
 
       const web3 = new Web3(window.ethereum);
       web3.eth.getAccounts((err, accounts) => {
@@ -84,7 +81,7 @@ function App() {
   const connectToWallet = async () => {
     try {
       if (!window.ethereum)
-        throw new Error("Celo wallet extension not detected");
+        throw new Error("wallet extension not detected");
 
       await window.ethereum.enable({ method: "eth_requestAccounts" });
       const accounts = await window.ethereum.request({
@@ -93,7 +90,7 @@ function App() {
       setCurrentAccount(accounts[0]);
     } catch (error) {
       console.log(error);
-      throw new Error("Failed to connect to Celo wallet");
+      throw new Error("Failed to connect to wallet");
     }
   };
 
@@ -222,6 +219,7 @@ function App() {
           currentAccount={currentAccount}
         />
       </div>
+      <TrustedAddressesTextBox />
       <div className="container">
         <AssignRole
           formData={formData}
