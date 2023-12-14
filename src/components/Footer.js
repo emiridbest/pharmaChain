@@ -8,7 +8,6 @@ const Footer = () => {
       href: "https://github.com/emiridbest",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          {/* SVG path for the GitHub icon */}
         </svg>
       ),
     },
@@ -17,7 +16,6 @@ const Footer = () => {
       href: "https://github.com/emiridbest",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          {/* SVG path for the GitHub icon */}
         </svg>
       ),
     },
@@ -26,16 +24,14 @@ const Footer = () => {
       href: "https://github.com/emiridbest",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          {/* SVG path for the GitHub icon */}
         </svg>
       ),
     },
     {
-      name: "Althea L1",
-      href: "https://github.com/emiridbest",
+      name: "Pego Scan",
+      href: "https://scan.pego.network/address/0xf394744146ba903DdDdaA11f5772AD4ca49e5b85",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          {/* SVG path for the GitHub icon */}
         </svg>
       ),
     },
@@ -44,7 +40,6 @@ const Footer = () => {
       href: "https://github.com/emiridbest",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          {/* SVG path for the GitHub icon */}
         </svg>
       ),
     },
@@ -53,7 +48,6 @@ const Footer = () => {
       href: "https://github.com/emiridbest",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          {/* SVG path for the GitHub icon */}
         </svg>
       ),
     },
@@ -62,7 +56,6 @@ const Footer = () => {
       href: "https://github.com/emiridbest",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          {/* SVG path for the GitHub icon */}
         </svg>
       ),
     },
@@ -71,7 +64,6 @@ const Footer = () => {
       href: "https://github.com/emiridbest",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          {/* SVG path for the GitHub icon */}
         </svg>
       ),
     },
@@ -80,7 +72,6 @@ const Footer = () => {
       href: "https://github.com/emiridbest",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          {/* SVG path for the GitHub icon */}
         </svg>
       ),
     },
